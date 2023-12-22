@@ -43,7 +43,7 @@ router.post('/login', async (req, res) => {
     const match = await bcrypt.compare(password, user.password);
     if (match) {
    
-      const token = jwt.sign({ userId: user._id }, 'yourSecretKey', { expiresIn: '1h' });
+      const token = jwt.sign({ userId: user._id }, 'GUVI', { expiresIn: '1h' });
       console.log(token);
 
       console.log('Login successful:', username);
